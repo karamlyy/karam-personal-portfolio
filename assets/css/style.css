@@ -1,0 +1,201 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(179, 174, 169);
+}
+.hello{
+    color: rgb(248, 237, 227);
+    background-color: rgb(73, 59, 79);
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    text-align: center;
+    height: 50px;
+    margin: 5px;
+    
+}
+.hello:hover{
+    background-color: rgb(248, 237, 227);
+    color: rgb(73, 59, 79);
+    font-size: 50px;
+    
+}
+.naming{
+    color: blue;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+
+.nav {
+    background-color: rgb(248, 237, 227);
+    color: rgb(73, 59, 79);
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    height: 50px;
+    margin: 5px;    
+    
+}
+  
+.nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+   
+    
+}
+.nav li:hover{
+    background-color: rgb(73, 59, 79);
+    color: rgb(248, 237, 227);
+    border-radius: 5px;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+    color: rgb(248, 237, 227);
+    border-radius: 5px;
+    background-color: rgb(73, 59, 79);
+    padding: 5px;
+}
+
+
+
+
+.container {
+    margin: 40px;
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    
+}
+  
+.image {
+    display: block;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 400px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(73, 59, 79);
+    border-radius: 10px;
+
+}
+  
+.container2:hover .overlay {
+    opacity: 1;
+
+}
+
+
+.bio-about{
+    font-weight: 600;
+    text-align: center;
+    color: rgb(38, 28, 42);
+}
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.paragraph{
+    color: rgb(16, 45, 45);
+    padding-left: 50px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+.contact{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.contact .social-media{
+    list-style-type: none;
+    width: 120px;
+    height: 120px;
+    margin: 0 20px;
+    border: 2px solid #0a3d62;
+    border-radius: 50%;
+    transition: all .5s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.contact .social-media i{
+    font-size: 48px;
+    color: #0a3d62;
+    transition: all .5s;
+}
+.contact .social-media::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#0a3d62;
+    border-radius:50%;
+    z-index: -1;
+    transition: all .5s;
+    opacity: 0;
+}
+.contact .social-media:hover::before{
+    opacity: 1;
+    transform: scale(.8);
+}
+.contact .social-media:hover i{
+    color: white;
+}
+.contact .social-media::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    border-radius:50%;
+    z-index: -1;
+    transition: all .5s;
+    opacity: 0;
+    border: 2px dashed #c51313;
+    box-sizing: border-box;
+}
+@keyframes rotating {
+    0%{
+        transform: scale(.92) rotate(0deg);
+    }
+    100%{
+        transform: scale(.92) rotate(360deg);
+    }
+}
+.social-media:hover::after{
+    opacity: 1;
+    animation: rotating 10s linear infinite;
+}
+
